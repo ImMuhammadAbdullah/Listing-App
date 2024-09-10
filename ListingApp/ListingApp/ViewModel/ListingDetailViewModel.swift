@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import SwiftUI
+import Combine
 
-@Observable
 class ListingDetailViewModel: ObservableObject {
     var listing: Listing
     

@@ -8,11 +8,10 @@
 import Foundation
 import Combine
 
-@Observable
 class ListingViewModel: ObservableObject {
     // Can add pagination on the listing if needed in the future
-    var listings: [Listing] = []
-    var isLoading: Bool = false
+    @Published var listings: [Listing] = []
+    @Published var isLoading: Bool = false
 
     private let client: ApiClient
     private var cancellables = Set<AnyCancellable>()
@@ -21,9 +20,13 @@ class ListingViewModel: ObservableObject {
         self.client = client
     }
     
-    func fetchListings() {
-        if listings.count > 0 { return }
+    func fetchListings(pullToRefresh: Bool = false) {
+        if !pullToRefresh && !listings.isEmpty {
+            return
+        }
+        
         isLoading = true
+        
         client.request(ListingsEndpoint.fetchListings, of: ListingsResponse.self)
             .receive(on: RunLoop.main)
             .sink { completion in
@@ -33,7 +36,7 @@ class ListingViewModel: ObservableObject {
                 case .failure(let error):
                     self.isLoading = false
                     print("ERROR: \(error)")
-                    // Throw error to user if needed
+                    // Optionally handle error (e.g., show an alert)
                 }
             } receiveValue: { [weak self] response in
                 self?.listings = response.results

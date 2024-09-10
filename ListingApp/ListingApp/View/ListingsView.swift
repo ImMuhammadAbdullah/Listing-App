@@ -13,10 +13,13 @@ struct ListingsView: View {
     var body: some View {
         NavigationView {
             VStack {
-                if viewModel.isLoading {
+                if viewModel.isLoading && viewModel.listings.isEmpty {
                     loadingView
                 } else {
                     listingsListView
+                        .refreshable {
+                            viewModel.fetchListings()
+                        }
                 }
             }
             .navigationTitle("Listings")
@@ -55,7 +58,7 @@ struct ListingsView: View {
                         .scaledToFill()
                         .frame(width: 100, height: 100)
                         .clipShape(RoundedRectangle(cornerRadius: 12))
-                       .shadow(radius: 5)
+                        .shadow(radius: 5)
                 } placeholder: {
                     ProgressView()
                         .frame(width: 100, height: 100)
@@ -84,4 +87,3 @@ struct ListingsView: View {
 #Preview {
     ListingsView()
 }
-
