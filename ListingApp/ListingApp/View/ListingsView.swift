@@ -54,7 +54,8 @@ struct ListingsView: View {
                     image.resizable()
                         .scaledToFill()
                         .frame(width: 100, height: 100)
-                        .clipped()
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                       .shadow(radius: 5)
                 } placeholder: {
                     ProgressView()
                         .frame(width: 100, height: 100)

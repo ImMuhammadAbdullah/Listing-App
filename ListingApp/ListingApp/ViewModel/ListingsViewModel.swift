@@ -42,10 +42,6 @@ class ListingViewModel: ObservableObject {
     }
     
     func thumbnailURL(for listing: Listing) -> URL? {
-        guard let thumbnailUrlString = listing.imageUrlsThumbnails.first,
-              let url = URL(string: thumbnailUrlString) else {
-            return nil
-        }
-        return url
+        return URL(string: listing.imageUrlsThumbnails.first ?? "" )
     }
 }

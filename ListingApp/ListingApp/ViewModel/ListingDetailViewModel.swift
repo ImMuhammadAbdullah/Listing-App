@@ -6,3 +6,25 @@
 //
 
 import Foundation
+import SwiftUI
+
+@Observable
+class ListingDetailViewModel: ObservableObject {
+    var listing: Listing
+    
+    init(listing: Listing) {
+        self.listing = listing
+    }
+    
+    var formattedPrice: String {
+        return "Price: \(listing.price)"
+    }
+    
+    var creationDate: String {
+        return "Created At: \(listing.createdAt)"
+    }
+    
+    var firstImageURL: URL? {
+        return URL(string: listing.imageUrls.first ?? "")
+    }
+}
