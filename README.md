@@ -62,3 +62,7 @@ The app follows the **MVVM** (Model-View-ViewModel) architecture, making use of 
 
 The app interacts with a REST API to fetch listing data. The API details are managed through the `URLSession+Extension.swift` file, which configures requests and handles responses.
 
+## Time Spent:
+
+2 Hours
+
