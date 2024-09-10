@@ -11,7 +11,7 @@ import SwiftUI
 struct ListingAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ListingsView()
         }
     }
 }
