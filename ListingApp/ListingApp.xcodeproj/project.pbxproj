@@ -17,6 +17,7 @@
 		D7EF06082C906DF10015ADE0 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EF06072C906DF10015ADE0 /* Listing.swift */; };
 		D7EF060A2C906E160015ADE0 /* ListingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EF06092C906E160015ADE0 /* ListingDetailView.swift */; };
 		D7EF060C2C906E260015ADE0 /* ListingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EF060B2C906E260015ADE0 /* ListingsViewModel.swift */; };
+		D7EF060E2C906F790015ADE0 /* ListingEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EF060D2C906F790015ADE0 /* ListingEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D7EF06072C906DF10015ADE0 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		D7EF06092C906E160015ADE0 /* ListingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailView.swift; sourceTree = "<group>"; };
 		D7EF060B2C906E260015ADE0 /* ListingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewModel.swift; sourceTree = "<group>"; };
+		D7EF060D2C906F790015ADE0 /* ListingEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				D7EF05F12C906C470015ADE0 /* ApiClient.swift */,
 				D7EF06052C906D020015ADE0 /* Endpoint.swift */,
 				D7EF05F32C906C470015ADE0 /* URLSession + Extension.swift */,
+				D7EF060D2C906F790015ADE0 /* ListingEndpoint.swift */,
 			);
 			path = NetWorking;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				D7EF05FB2C906C470015ADE0 /* ApiClient.swift in Sources */,
 				D7EF06082C906DF10015ADE0 /* Listing.swift in Sources */,
 				D7EF06062C906D020015ADE0 /* Endpoint.swift in Sources */,
+				D7EF060E2C906F790015ADE0 /* ListingEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
